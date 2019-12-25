@@ -29,12 +29,25 @@ namespace am {
 					return 0;
 				}
 			}
+			int& operator [](Int &t) {
+				if (!isArray) return self;
+				if (isArray && t.getself() <= size) {
+					return arrayContent[t.getself()];
+				}
+				return 0;
+			}
+			int& operator **(int &t) {
+				return pow(self, t);
+			}
+			int& operator **(Int &t) {
+				return pow(self, t.getself());
+			}
 			Int Int:: operator++() {
 				++self;
 				return *this;
 			}
 			Int Int:: operator++(int) {
-				selfA=+;
+				self++;
 				return *this;
 			}
 	};
